@@ -11,7 +11,7 @@ export const loader = async () => {
       take: 1,
     });
     return json({ randomJoke });
-  };
+  }; 
   
   export default function JokesIndexRoute() {
     const data = useLoaderData();
@@ -26,4 +26,11 @@ export const loader = async () => {
       </div>
     );
   }
-  
+   
+  export function ErrorBoundary() {
+    return (
+      <div className="error-container">
+        I did a whoopsies.
+      </div>
+    );
+  }
